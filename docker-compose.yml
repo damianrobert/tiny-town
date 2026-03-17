@@ -27,7 +27,7 @@ services:
       DB_PASSWORD: ${POSTGRES_PASSWORD}
       DB_PORT: "${POSTGRES_PORT}"
     ports:
-      - "${APP_PORT}:8000"
+      - "127.0.0.1:${APP_PORT}:8000"
     depends_on:
       db:
         condition: service_healthy
